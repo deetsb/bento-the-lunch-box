@@ -1,0 +1,57 @@
+/* General Layout */
+body {
+    font-family: Arial, Geneva, Tahoma, sans-serif;
+    background-color: #f0f4fa;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+/* Header */
+/* header h1 {
+    text-align: ;
+    font-size: ;
+    margin-bottom: ;
+}  */
+  
+/* Lunchbox Container */
+.lunchBox {
+    width: 350px;
+    /* height: 700px; */
+    border: 5px solid #87c2f5;
+    border-radius: 12px;
+    background-color: 79c0f3;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 15px;
+}
+  
+/* Bento Containers */
+.container,
+.box,
+.snackBox,
+.fruitBox,
+.drinkBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: a8e48a;
+    border-radius: 10px;
+    padding: 10px;
+    /* border: 5px solid red; */
+}
+/* 
+img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+} */
+
+/* Carousel */
+
+
+/* Button */
