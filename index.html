@@ -16,49 +16,86 @@
   </header>
   
   <main>
-    <div class="lunchBox">  <!-- bento-box-container -->
-      <section class="sandwichBox">  <!-- sandwich-container -->
+    <!-- bento-box-container -->
+    <div class="lunchBox">  
+
+      <!-- sandwich-container -->
+      <section class="sandwichBox">  
         <h2>Sandwich</h2>  
-        <figure class="carousel" id="sandwich-carousel">
+        <div class="carousel" id="sandwich-carousel">
           <img src="./assets/images/sandwiches/peanut-butter-jelly.JPG" alt="PB & J sandwich"/>
           <img src="./assets/images/sandwiches/turkey.jpg" alt="Turkey sandwich"/>
           <img src="./assets/images/sandwiches/tuna.jpg" alt="Tuna sandwich"/>
           <img src="./assets/images/sandwiches/wrap.jpg" alt="A wrap sandwich"/>
           <img src="./assets/images/sandwiches/grilled-cheese.jpeg" alt="Grilled cheese sandwich"/>
-        </figure>
+        </div>
       </section>
   
-      <section class="snackBox">  <!-- snack-container -->
+      <!-- snack-container -->
+      <section class="snackBox">  
         <h2>Snack</h2>
-        <figure class="carousel" id="snack-carousel">
+        <div class="carousel" id="snack-carousel">
           <img src="./assets/images/snacks/string-cheese.JPG" alt="String cheese!"/>
           <img src="./assets/images/snacks/yogurt.JPG" alt="Cup of yogurt"/>
           <img src="./assets/images/snacks/pretzel.JPG" alt="Pretzels"/>
           <img src="./assets/images/snacks/granola.JPG" alt="Granola chunks"/>
           <img src="./assets/images/snacks/crackers.JPG" alt="Cheese crackers"/>
-        <figure>
+        <div>
       </section>
   
-      <section class="fruitBox">  <!-- fruit-container -->
+      <!-- fruit-container -->
+      <section class="fruitBox">  
         <h2>Fruit</h2>
-        <figure class="carousel" id="fruit-carousel">
+        <div class="carousel" id="fruit-carousel">
           <img src="./assets/images/fruits/apple.jpg" alt="Portioned apple slices"/>
           <img src="./assets/images/fruits/banana.JPG" alt="Bananas"/>
           <img src="./assets/images/fruits/grapes.JPG" alt="Grapes"/>
           <img src="./assets/images/fruits/strawberries.JPG" alt="Strawberries"/>
           <img src="./assets/images/fruits/orange.JPG" alt="A singular orange"/>
-        </figure>
+        </div>
       </section>
-  
-      <section class="drinkBox">  <!-- drink-container -->
+
+      <!-- drink-container -->
+      <section class="drinkBox">  
         <h2>Drink</h2>
-        <figure class="carousel" id="drink-carousel">
+        <div class="carousel" id="drink-carousel">
           <img src="./assets/images/drinks/water-bottle.jpg" alt="A water bottle"/>
           <img src="./assets/images/drinks/milk.jpg" alt="Milk carton"/>
-          <img src="./assets/images/drinks/fruit-juice.jpg Juice.jpg" alt="Two juice boxes"/>
+          <img src="./assets/images/drinks/fruit-juice.jpg" alt="Two juice boxes"/>
           <img src="./assets/images/drinks/smoothie.jpg" alt="Fruit smoothie"/>
           <img src="./assets/images/drinks/flavor-water.jpg" alt="Multiple flavored waters"/>
-        </figure>
+        </div>
+
+      <!--Make Lunch button-->  
+          <div class="button-container">
+            <button class=“lunch-btn” id=“lunchBtn”>Let's Make Lunch!</button>        
+        </div>
+  
+        <!--Carousel buttons-->
+        <div>
+          <button class="Sandwich" id="carouselSandwich"></button>
+          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="sandLeft"/>
+          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="sandRight"/>
+        </div>
+  
+        <div>
+          <button class="Snack" id="carouselSnack"></button>
+          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="snackLeft"/>
+          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="snackRight"/>       
+        </div>
+  
+        <div>
+          <button class="Fruit" id="carouselFruit"></button>
+          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="fruitLeft"/>
+          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="fruitRight"/>
+        </div>
+  
+        <div>
+          <button class="Drink" id="carouselDrink"></button>
+          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="drinkLeft"/>
+          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="drinkRight"/>
+        </div>
+
       </section>
     </div>
   </main>
