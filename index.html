@@ -2,105 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Bento -  The Lunch Box</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+  <title>Bento - The Lunch Box</title>
 </head>
 
-<body>  
+<body>
   <header>
-    <section>
-      <h1>Bento - The Lunch Box </h1>
+    <section id="boxHandle">
+      <img src="./assets/images/misc/bento-handle.png" alt="Lunchbox Handle"/>
     </section>
   </header>
-  
   <main>
+
     <!-- bento-box-container -->
-    <div class="lunchBox">  
+    <div class="lunchBox">
 
       <!-- sandwich-container -->
-      <section class="sandwichBox">  
-        <h2>Sandwich</h2>  
-        <div class="carousel" id="sandwich-carousel">
-          <img src="./assets/images/sandwiches/peanut-butter-jelly.JPG" alt="PB & J sandwich"/>
-          <img src="./assets/images/sandwiches/turkey.jpg" alt="Turkey sandwich"/>
-          <img src="./assets/images/sandwiches/tuna.jpg" alt="Tuna sandwich"/>
-          <img src="./assets/images/sandwiches/wrap.jpg" alt="A wrap sandwich"/>
-          <img src="./assets/images/sandwiches/grilled-cheese.jpeg" alt="Grilled cheese sandwich"/>
+      <section class="sandwichBox">
+        <h2>Sandwich</h2>
+        <div class="carousel" id="sandwichCarousel">
+          <button id="sandwichPrev">Prev</button>
+          <button id="sandwichNext">Next</button>
         </div>
       </section>
-  
+
       <!-- snack-container -->
-      <section class="snackBox">  
+      <section class="snackBox">
         <h2>Snack</h2>
-        <div class="carousel" id="snack-carousel">
-          <img src="./assets/images/snacks/string-cheese.JPG" alt="String cheese!"/>
-          <img src="./assets/images/snacks/yogurt.JPG" alt="Cup of yogurt"/>
-          <img src="./assets/images/snacks/pretzel.JPG" alt="Pretzels"/>
-          <img src="./assets/images/snacks/granola.JPG" alt="Granola chunks"/>
-          <img src="./assets/images/snacks/crackers.JPG" alt="Cheese crackers"/>
-        <div>
+        <div class="carousel" id="snackCarousel">
+          <button id="snackPrev">Prev</button>
+          <button id="snackNext">Next</button>
+          <div>
       </section>
-  
+
       <!-- fruit-container -->
-      <section class="fruitBox">  
+      <section class="fruitBox">
         <h2>Fruit</h2>
-        <div class="carousel" id="fruit-carousel">
-          <img src="./assets/images/fruits/apple.jpg" alt="Portioned apple slices"/>
-          <img src="./assets/images/fruits/banana.JPG" alt="Bananas"/>
-          <img src="./assets/images/fruits/grapes.JPG" alt="Grapes"/>
-          <img src="./assets/images/fruits/strawberries.JPG" alt="Strawberries"/>
-          <img src="./assets/images/fruits/orange.JPG" alt="A singular orange"/>
+        <div class="carousel" id="fruitCarousel">
+          <button id="fruitPrev">Prev</button>
+          <button id="fruitNext">Next</button>
         </div>
       </section>
 
-      <!-- drink-container -->
-      <section class="drinkBox">  
+      <!--drink-container-->
+      <section class="drinkBox">
         <h2>Drink</h2>
-        <div class="carousel" id="drink-carousel">
-          <img src="./assets/images/drinks/water-bottle.jpg" alt="A water bottle"/>
-          <img src="./assets/images/drinks/milk.jpg" alt="Milk carton"/>
-          <img src="./assets/images/drinks/fruit-juice.jpg" alt="Two juice boxes"/>
-          <img src="./assets/images/drinks/smoothie.jpg" alt="Fruit smoothie"/>
-          <img src="./assets/images/drinks/flavor-water.jpg" alt="Multiple flavored waters"/>
+        <div class="carousel" id="drinkCarousel">
+          <button id="drinkPrev">Prev</button>
+          <button id="drinkNext">Next</button>
         </div>
-
-      <!--Make Lunch button-->  
-          <div class="button-container">
-            <button class=“lunch-btn” id=“lunchBtn”>Let's Make Lunch!</button>        
-        </div>
-  
-        <!--Carousel buttons-->
-        <div>
-          <button class="Sandwich" id="carouselSandwich"></button>
-          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="sandLeft"/>
-          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="sandRight"/>
-        </div>
-  
-        <div>
-          <button class="Snack" id="carouselSnack"></button>
-          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="snackLeft"/>
-          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="snackRight"/>       
-        </div>
-  
-        <div>
-          <button class="Fruit" id="carouselFruit"></button>
-          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="fruitLeft"/>
-          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="fruitRight"/>
-        </div>
-  
-        <div>
-          <button class="Drink" id="carouselDrink"></button>
-          <img src="./assets/images/misc/back-nav-icon.png" alt="left arrow" class="drinkLeft"/>
-          <img src="./assets/images/misc/fwd-nav-icon.png" alt="right arrow" class="drinkRight"/>
-        </div>
-
       </section>
+      <button class=“lunch-btn” id=“lunchBtn”>Let's Make Lunch!</button>
     </div>
   </main>
-  
-  <script src="./assets/js/script.js"></script>
 
+  <!--Java-Containers-->
+  <script src="./assets/js/variables.js"></script>
+  <script src="./assets/js/images.js"></script>
+  <script src="./assets/js/navLogic.js"></script>
+  <script src="./assets/js/navigate.js"></script>
 </body>
+
 </html>
