@@ -1,57 +1,78 @@
-/* General Layout */
-body {
-    font-family: Arial, Geneva, Tahoma, sans-serif;
-    background-color: #f0f4fa;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+/*HANDLE*/
+#boxHandle {
+    width: 150px;
+    margin: auto;
 }
-  
-/* Header */
-/* header h1 {
-    text-align: ;
-    font-size: ;
-    margin-bottom: ;
-}  */
-  
-/* Lunchbox Container */
+
+/*LUNCHBOX*/
 .lunchBox {
-    width: 350px;
-    /* height: 700px; */
-    border: 5px solid #87c2f5;
-    border-radius: 12px;
-    background-color: 79c0f3;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: 10px;
-    padding: 15px;
-}
-  
-/* Bento Containers */
-.container,
-.box,
-.snackBox,
-.fruitBox,
-.drinkBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: #79C0F3;
+    height: 500px;
+    width: 750px;
+    border-radius: 20px;
+    margin-left: 25%;
+    display: inline-grid;
     justify-content: center;
-    background-color: a8e48a;
-    border-radius: 10px;
-    padding: 10px;
-    /* border: 5px solid red; */
+    align-items: center;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em 1em;
 }
-/* 
-img {
+
+/*CONTAINERS*/
+.sandwichBox {
+    background: #f2b679;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.snackBox {
+    background: #f2b679;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.fruitBox {
+    background: #f2b679;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.drinkBox {
+    background: #f2b679;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/*CAROUSELS*/
+ #sandwichCarousel, #drinkCarousel, #fruitCarousel, #snackCarousel {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    margin: auto;
+} 
+/*LETS MAKE LUNCH*/
+#lunchBtn {
+    position: fixed;
+    bottom: 0;
+    width: 50px;
+}
+
+/*DISPLAY CONTENT*/
+.contentHeader {
+    background-color: orange;
     width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-} */
-
-/* Carousel */
-
-
-/* Button */
+    height: 25px;
+}
