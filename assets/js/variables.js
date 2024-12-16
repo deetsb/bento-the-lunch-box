@@ -25,3 +25,6 @@ const drinkPrev = document.querySelector('#drinkPrev');
 const drinkNext = document.querySelector('#drinkNext');
 let drinkIndex = 0;
 let drinkCurrentImage;
+
+// Lunch Button
+const lunchBtn = document.getElementById('lunchBtn')
