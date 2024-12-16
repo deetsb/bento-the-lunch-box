@@ -47,3 +47,27 @@ drinkPrev.addEventListener(`click`, function (event) {
 });
 
 drinkNav(0);
+
+lunchBtn.addEventListener(`click`, function (event) {
+    event.stopPropagation();
+    localStorage.setItem('currentBentoBox', JSON.stringify(currentBentoBox));
+    packedLunchBox()
+});
+
+const packedLunchBox = () => {
+    const packedLunchWrapper = document.getElementById('packedLunch');
+    const packedLunchSandwich = document.createElement('p');
+    const packedLunchSnack = document.createElement('p');
+    const packedLunchDrink = document.createElement('p');
+    const packedLunchFruit = document.createElement('p');
+
+    const bentoBoxItems = JSON.parse(localStorage.getItem('currentBentoBox'));
+    
+    packedLunchSandwich.innerText = bentoBoxItems.sandwich.replaceAll('-', ' ');
+    packedLunchSnack.innerText = bentoBoxItems.snack.replaceAll('-', ' ');
+    packedLunchDrink.innerText = bentoBoxItems.drink.replaceAll('-', ' ');
+    packedLunchFruit.innerText = bentoBoxItems.fruit.replaceAll('-', ' ');
+
+    packedLunchWrapper.innerHTML = "";
+    packedLunchWrapper.append(packedLunchSandwich, packedLunchSnack, packedLunchDrink, packedLunchFruit);
+}

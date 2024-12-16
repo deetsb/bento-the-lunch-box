@@ -6,6 +6,13 @@ const sandwichImages = [
   `assets/images/sandwiches/wrap.jpg`,
   `assets/images/sandwiches/grilled-cheese.jpeg`,
 ];
+const sandwichValues = [
+  "peanut-butter-jelly",
+  "turkey",
+  "tuna",
+  "wrap",
+  "grilled-cheese"
+]
 
 sandwichCarousel.style.backgroundImage = "url(`assets/images/sandwiches/peanut-butter-jelly.JPG`)";
 
@@ -17,7 +24,13 @@ const snackImages = [
   `assets/images/snacks/granola.JPG`,
   `assets/images/snacks/crackers.JPG`,
 ];
-// crackers.JPG not present in local. Re-add to/from repository
+const snackValues = [
+  "string-cheese",
+  "yogurt",
+  "pretzel",
+  "granola",
+  "crackers"
+]
 
 snackCarousel.style.backgroundImage = "url(`assets/images/snacks/string-cheese.JPG`)";
 
@@ -29,7 +42,13 @@ const fruitImages = [
   `assets/images/fruits/strawberries.JPG`,
   `assets/images/fruits/orange.JPG`,
 ];
-// apple.jpg not present in local. Re-add to/from repository
+const fruitValues = [
+  "apple",
+  "banana",
+  "grapes",
+  "strawberries",
+  "orange"
+]
 
 fruitCarousel.style.backgroundImage = "url(`assets/images/fruits/apple.jpg`)";
 
@@ -41,6 +60,21 @@ const drinkImages = [
   `assets/images/drinks/smoothie.jpg`,
   `assets/images/drinks/flavor-water.jpg`,
 ];
-// flavor-water.jpg not present in local. Re-add to/from repository
+const drinkValues = [
+  "water-bottle",
+  "milk",
+  "fruit-juice",
+  "smoothie",
+  "flavor-water"
+]
+// const drinks = [
+//   waterBottle: {
+//     image: `assets/images/drinks/water-bottle.jpg`,
+//     value: "waterBottle"
+//   }
+//   fruitJuice: {
+
+//   }
+// ]
 
 drinkCarousel.style.backgroundImage = "url(`assets/images/drinks/water-bottle.jpg`)";
