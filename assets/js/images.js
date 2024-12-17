@@ -3,8 +3,8 @@ const food = {
   sandwich: {
     images: [
       'assets/images/sandwiches/peanut-butter-jelly.JPG',
-      'assets/images/sandwiches/turkey.jpg',
-      'assets/images/sandwiches/tuna.jpg',
+      'assets/images/sandwiches/turkey.JPG',
+      'assets/images/sandwiches/tuna.JPG',
       'assets/images/sandwiches/wrap.jpg',
       'assets/images/sandwiches/grilled-cheese.jpeg',
     ],
