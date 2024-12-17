@@ -1,3 +1,4 @@
+// Food Object w/ Img & String-Values f/ ea Category
 const food = {
   sandwich: {
     images: [
@@ -57,7 +58,7 @@ const food = {
     ],
     values: [
       'Bottled-Water',
-      'Milk-Carton',
+      'Milk',
       'Fruit-Juice',
       'Smoothie',
       'Flavored-Water',
