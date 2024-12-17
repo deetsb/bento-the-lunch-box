@@ -1,62 +1,53 @@
+// Bento Box Logic
 let currentBentoBox = {
   sandwich: "",
   drink: "",
   snack: "",
   fruit: ""
+};
+
+// Update Bento Box
+function updateBentoBox(category, index) {
+  currentBentoBox[category] = food[category].values[index];
+  console.log(currentBentoBox);
 }
 
-// Sandwich Main Nav Logic
-function sandwichNav(direction) {
-  sandwichIndex = sandwichIndex + direction;
-  if (sandwichIndex < 0) {
-    sandwichIndex = sandwichImages.length - 1;
-  } else if (sandwichIndex > sandwichImages.length - 1) {
-    sandwichIndex = 0;
+// Generic Nav Logic
+function navigateCarousel(carouselElement, imagesArray, currentIndex, direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) {
+    currentIndex = imagesArray.length - 1;
+  } else if (currentIndex >= imagesArray.length) {
+    currentIndex = 0;
   }
-  sandwichCurrentImage = sandwichImages[sandwichIndex];
-  currentBentoBox.sandwich = sandwichValues[sandwichIndex];
-  console.log(currentBentoBox);
-  sandwichCarousel.style.backgroundImage = `url('${sandwichCurrentImage}')`;
-};
+  carouselElement.style.backgroundImage = `url('${imagesArray[currentIndex]}')`;
+  return currentIndex;
+}
 
-// Snack Main Nav Logic
-function snackNav(direction) {
-  snackIndex = snackIndex + direction;
-  if (snackIndex < 0) {
-    snackIndex = snackImages.length - 1;
-  } else if (snackIndex > snackImages.length - 1) {
-    snackIndex = 0;
-  }
-  snackCurrentImage = snackImages[snackIndex]
-  currentBentoBox.snack = snackValues[snackIndex];
-  console.log(currentBentoBox);
-  snackCarousel.style.backgroundImage = `url('${snackCurrentImage}')`;
-};
+// Helper function to add event listeners
+function addNavListeners(prevButton, nextButton, carouselElement, imagesArray, currentIndex, category) {
+  prevButton.addEventListener('click', () => {
+    currentIndex = navigateCarousel(carouselElement, imagesArray, currentIndex, -1);
+    updateBentoBox(category, currentIndex);
+  });
+  nextButton.addEventListener('click', () => {
+    currentIndex = navigateCarousel(carouselElement, imagesArray, currentIndex, 1);
+    updateBentoBox(category, currentIndex);
+  });
+  return currentIndex;
+}
 
-// Fruit Main Nav Logic
-function fruitNav(direction) {
-  fruitIndex = fruitIndex + direction;
-  if (fruitIndex < 0) {
-    fruitIndex = fruitImages.length - 1;
-  } else if (fruitIndex > fruitImages.length - 1) {
-    fruitIndex = 0;
-  }
-  fruitCurrentImage = fruitImages[fruitIndex];
-  currentBentoBox.fruit = fruitValues[fruitIndex];
-  console.log(currentBentoBox);
-  fruitCarousel.style.backgroundImage = `url('${fruitCurrentImage}')`;
-};
+// Initial Setup
+function setInitialBackgroundImage(carouselElement, imagesArray, category) {
+  carouselElement.style.backgroundImage = `url('${imagesArray[0]}')`;
+  updateBentoBox(category, 0); // Set initial value for currentBentoBox
+}
 
-// Drink Main Nav Logic
-function drinkNav(direction) {
-  drinkIndex = drinkIndex + direction;
-  if (drinkIndex < 0) {
-    drinkIndex = drinkImages.length - 1;
-  } else if (drinkIndex > drinkImages.length - 1) {
-    drinkIndex = 0;
-  }
-  drinkCurrentImage = drinkImages[drinkIndex];
-  currentBentoBox.drink = drinkValues[drinkIndex];
-  console.log(currentBentoBox);
-  drinkCarousel.style.backgroundImage = `url('${drinkCurrentImage}')`;
-};
+// Set initial background images and add event listeners for all carousels
+Object.keys(carouselElements).forEach(id => {
+  const { carousel, prev, next, index } = carouselElements[id];
+  const imagesArray = food[id].images;
+
+  setInitialBackgroundImage(carousel, imagesArray, id); // Pass category to setInitialBackgroundImage
+  carouselElements[id].index = addNavListeners(prev, next, carousel, imagesArray, index, id);
+});

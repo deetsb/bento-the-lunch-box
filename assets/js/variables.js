@@ -1,30 +1,21 @@
-// Sandwich Variables
-const sandwichCarousel = document.querySelector('#sandwichCarousel');
-const SandwichPrev = document.querySelector('#sandwichPrev');
-const SandwichNext = document.querySelector('#sandwichNext');
-let sandwichIndex = 0;
-let sandwichCurrentImage;
-
-// Snack Variables
-const snackCarousel = document.querySelector('#snackCarousel');
-const snackPrev = document.querySelector('#snackPrev');
-const snackNext = document.querySelector('#snackNext');
-let snackIndex = 0;
-let snackCurrentImage;
-
-// Fruit Variables
-const fruitCarousel = document.querySelector('#fruitCarousel');
-const fruitPrev = document.querySelector('#fruitPrev');
-const fruitNext = document.querySelector('#fruitNext');
-let fruitIndex = 0;
-let fruitCurrentImage;
-
-// Drink Variables
-const drinkCarousel = document.querySelector('#drinkCarousel');
-const drinkPrev = document.querySelector('#drinkPrev');
-const drinkNext = document.querySelector('#drinkNext');
-let drinkIndex = 0;
-let drinkCurrentImage;
-
+// Carousel Configurations
+const carousels = [
+  { id: 'sandwich', carousel: '#sandwichCarousel', prev: '#sandwichPrev', next: '#sandwichNext' },
+  { id: 'snack', carousel: '#snackCarousel', prev: '#snackPrev', next: '#snackNext' },
+  { id: 'fruit', carousel: '#fruitCarousel', prev: '#fruitPrev', next: '#fruitNext' },
+  { id: 'drink', carousel: '#drinkCarousel', prev: '#drinkPrev', next: '#drinkNext' },
+];
+  
+// Initialize Variables
+const carouselElements = {};
+carousels.forEach(({ id, carousel, prev, next }) => {
+  carouselElements[id] = {
+    carousel: document.querySelector(carousel),
+    prev: document.querySelector(prev),
+    next: document.querySelector(next),
+    index: 0,
+  };
+});
+  
 // Lunch Button
-const lunchBtn = document.getElementById('lunchBtn')
+const lunchBtn = document.getElementById('lunchBtn');
