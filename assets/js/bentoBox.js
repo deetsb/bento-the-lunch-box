@@ -1,16 +1,16 @@
 // Display Bento Box on Lunch Button Click
-lunchBtn.addEventListener('click', () => {
-  localStorage.setItem('currentBentoBox', JSON.stringify(currentBentoBox));
+lunchButton.addEventListener('click', () => {
+  localStorage.setItem('currentBentoBox', JSON.stringify(currentBentoBox));  // Stores currentBentoBox object in localStorage
   packedLunchBox();
 });
     
 // Function to Display Packed Lunch Box
-const packedLunchBox = () => {
+const packedLunchBox = () => {  // Appends data & changes values "-" into spaces for display w/ modal
   const packedLunchWrapper = document.getElementById('packedLunch');
-  const packedLunchSandwich = document.createElement('p');
-  const packedLunchSnack = document.createElement('p');
-  const packedLunchDrink = document.createElement('p');
-  const packedLunchFruit = document.createElement('p');
+  const packedLunchSandwich = document.createElement('li');
+  const packedLunchSnack = document.createElement('li');
+  const packedLunchDrink = document.createElement('li');
+  const packedLunchFruit = document.createElement('li');
     
   const bentoBoxItems = JSON.parse(localStorage.getItem('currentBentoBox'));
     

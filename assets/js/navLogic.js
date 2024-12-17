@@ -1,4 +1,4 @@
-// Bento Box Logic
+// Bento Box Object w/ properties; Empty strings to be filled later
 let currentBentoBox = {
   sandwich: "",
   drink: "",
@@ -8,12 +8,12 @@ let currentBentoBox = {
 
 // Update Bento Box
 function updateBentoBox(category, index) {
-  currentBentoBox[category] = food[category].values[index];
+  currentBentoBox[category] = food[category].values[index];  // Pairs w/ lines 47-53; category = equivalent id value; ie. sandwich, fruit, drink, snack; Collects data f/ images.js
   console.log(currentBentoBox);
 }
 
 // Generic Nav Logic
-function navigateCarousel(carouselElement, imagesArray, currentIndex, direction) {
+function navigateCarousel(carouselElement, imagesArray, currentIndex, direction) {  // Parameters apply values f/ variables.js objects & arrays; Same logic applies to all unique carousels
   currentIndex += direction;
   if (currentIndex < 0) {
     currentIndex = imagesArray.length - 1;
@@ -25,7 +25,7 @@ function navigateCarousel(carouselElement, imagesArray, currentIndex, direction)
 }
 
 // Helper function to add event listeners
-function addNavListeners(prevButton, nextButton, carouselElement, imagesArray, currentIndex, category) {
+function addNavListeners(prevButton, nextButton, carouselElement, imagesArray, currentIndex, category) {  // Adds prevButton & nextButton logic to already existing parameters
   prevButton.addEventListener('click', () => {
     currentIndex = navigateCarousel(carouselElement, imagesArray, currentIndex, -1);
     updateBentoBox(category, currentIndex);
@@ -44,7 +44,7 @@ function setInitialBackgroundImage(carouselElement, imagesArray, category) {
 }
 
 // Set initial background images and add event listeners for all carousels
-Object.keys(carouselElements).forEach(id => {
+Object.keys(carouselElements).forEach(id => {  // Object.keys + forEach; converts values of carouselElements id into keys & iterates over each value; ie. sandwich, snack, fruit, drink
   const { carousel, prev, next, index } = carouselElements[id];
   const imagesArray = food[id].images;
 
